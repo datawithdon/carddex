@@ -1,0 +1,14 @@
+{
+  "name": "CardDex — Pokémon card scanner",
+  "short_name": "CardDex",
+  "description": "Scan Pokémon cards, see market prices, track your collection, sets and wishlist.",
+  "start_url": "./#/scan",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b1220",
+  "theme_color": "#1d4ed8",
+  "icons": [
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}

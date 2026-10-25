@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob: https://assets.tcgdex.net; connect-src 'self' https://api.tcgdex.net https://api.anthropic.com; media-src 'self' blob:; font-src 'self'; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="CardDex: scan Pokémon cards with your phone camera, see live market prices, and track your collection, set completion and wishlist. Runs in your browser; your data stays on your device.">
+  <meta name="theme-color" content="#1d4ed8">
+  <title>CardDex</title>
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#/scan"><img src="icons/icon.svg" alt="" width="28" height="28">CardDex</a>
+      <nav aria-label="Main">
+        <a href="#/scan" data-view="scan">Scan</a>
+        <a href="#/search" data-view="search">Search</a>
+        <a href="#/collection" data-view="collection">Collection <span id="nav-count" class="count"></span></a>
+        <a href="#/sets" data-view="sets">Sets</a>
+        <a href="#/wishlist" data-view="wishlist">Wishlist <span id="nav-deals" class="badge good hidden"></span></a>
+        <a href="#/settings" data-view="settings">Settings</a>
+      </nav>
+    </div>
+  </header>
+  <main id="view" tabindex="-1"><p class="empty">Loading…</p></main>
+  <div id="modal" class="modal hidden"></div>
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+  <footer>CardDex stores your collection only in this browser. Card data and prices come from <a href="https://tcgdex.dev" target="_blank" rel="noopener noreferrer">TCGdex</a>. Not affiliated with Nintendo, The Pokémon Company or Creatures. Pokémon and card images are trademarks of their respective owners.</footer>
+  <noscript><p class="empty">CardDex needs JavaScript.</p></noscript>
+</body>
+</html>
