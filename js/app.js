@@ -1,5 +1,6 @@
 // Entry point: hash router, nav state, modal keyboard handling, service worker.
 
+import "./tt.js"; // first: Trusted Types policy
 import { $, $$ } from "./dom.js";
 import { autoCheck } from "./prices.js";
 import { isDeal, load, onChange, state } from "./store.js";
