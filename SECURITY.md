@@ -41,6 +41,18 @@ what it does to protect users and how to report a problem.
   metadata such as GPS location.
 - Third-party code is vendored at pinned versions (see `vendor/tesseract/README.md`).
 
+## Known limits
+
+- **Shared origin.** GitHub Pages serves all of an account's project sites from
+  one origin (`datawithdon.github.io`), and those sites share browser storage.
+  An API key saved with "Remember on this device" can be read by any page on
+  that origin. The other apps there were audited (strict CSP, no HTML-string
+  rendering, sanitized imports), but for the strongest isolation leave
+  "Remember" unticked, or give the key a low monthly spend limit in the Claude
+  Console. Hosting the app on its own domain removes this risk.
+- **Data is stored unencrypted in the browser.** Anyone with access to the
+  browser profile can read it.
+
 ## Reporting
 
 Please open a private security advisory on the GitHub repository rather than a
